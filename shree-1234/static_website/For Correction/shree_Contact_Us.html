@@ -1,0 +1,138 @@
+<!doctype html>
+
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 	Bootstrap -->
+	
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+              <!-- ==custom css== -->
+	 <link href="shreeContactUs.css" rel="stylesheet">  
+
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script src="shreelayout.js"></script><!--=====custom javascript=======-->
+
+	<title>shreelayout</title>
+
+
+	<style>
+    
+	</style>
+
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery.js"></script>
+
+<!-- 
+	<script>
+
+function Scroll(){
+var top = document.getElementById('navigationBar');
+var brand = document.getElementById('brandimg');
+var ypos = window.pageYOffset;
+if(ypos > 120) {
+	top.style.height = "85px";
+	brand.style.height ="70px";
+	brand.style.width ="auto";
+    top.style.background = "#222";
+}
+else{
+	top.style.height = "100px";
+	 top.style.background = "#222";
+	brand.style.height ="100px";
+	brand.style.width ="auto";
+
+	}
+}
+	window.addEventListener("scroll",Scroll);
+
+	</script> -->
+
+ <div class="container">
+		
+	<nav id="navigationBar" class="navbar  navbar-inverse navbar-fixed-top underline-hover">
+		<div class="container">
+			<div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
+               		
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+      			</button>
+
+      			 <a class="navbar-brand brand-img-smaller"  href="#">
+					<img id="brandimg" src="REVERSE-LOGO.png" 
+					class="img-responsive" ><!-- width="100%" height="auto" -->
+		        </a>
+
+			</div>	<!--navheader end-->
+
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right"  >
+					<li class="one " ><a href="shreelayout.html">Home</a></li>
+					<li class="two"><a href="shreelayout.html#productcontaint">Product</a></li>
+					<li class="three"><a href="#">Service</a></li> 
+					<li class="four active"><a href="shree_Contact_Us.html">Contact us</a></li> 
+					
+				</ul>
+			</div>
+			
+		</div>
+	</nav>
+</div>
+
+<div class="formcontainer">
+	<div class="container panel panel-default">
+		<p>We have our branches in Hydrabad, Amravati, Nagpur, Akola, Khandawa.Please contact nearer branch for booking information,services or any other query.</p>
+       </div>
+ <form name="feedback" method="post" action="">
+     <div id="userinfo"class="container" >
+    <div class="row" >
+     <div class="col-md-4">
+   <form  role="form">
+      <div class="form-group">
+      	<label for="selectcity">Please select branch</label>
+      	<select multiple class="form-control" id="branchselection">
+      		<option>Akola</option>
+      		<option>Amravati</option>
+      		<option>Nagpur</option>
+      		<option>Hydrabad</option>
+      		<option>Khandawa</option>
+      	</select>
+      </div>
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Name Surname">
+    </div>
+    <div class="form-group">
+      <label for="contact">Contact Number</label>
+      <input type="text" class="form-control" id="contact" placeholder="000-000-0000">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+   
+    <div class="form-group">
+  <label for="msg">Message</label>
+  <textarea class="form-control" rows="5" id="msg"  placeholder="type your message"></textarea>
+</div>
+    
+    <button type="submit" class="btn btn-lg ">Submit</button>
+  </div><!--end of col-md-4-->
+  </div>
+</div>
+     
+ </form>
+</div><!-- ==========container close========= -->
+</body>
+</html>

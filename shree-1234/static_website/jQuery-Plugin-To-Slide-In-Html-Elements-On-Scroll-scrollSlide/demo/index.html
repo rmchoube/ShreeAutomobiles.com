@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery scrollSlide Plugin Demo</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    	<!--  Stylesheets -->
+    	<link rel='stylesheet' href='css/style.css' type='text/css'>
+
+    	<!-- JavaScripts -->
+    	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    	<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    	<script src="js/jquery.scrollslide.js"></script>
+    	<script>
+    		$(document).ready(function(){
+    			$('.slide-left-200').scrollSlide({
+				    direction   : 'left',
+				    scrollstart : 200
+				});
+
+				$('.slide-right-200').scrollSlide({
+				    direction   : 'right',
+				    scrollstart : 200
+				});
+
+				$('.slide-left-400').scrollSlide({
+				    direction   : 'left',
+				    scrollstart : 400
+				});
+
+				$('.slide-right-400').scrollSlide({
+				    direction   : 'right',
+				    scrollstart : 400
+				});
+    		});
+    	</script>
+	</head>
+	<body>
+		
+
+		<section class="showcase">
+			<div class="container">
+				<h1>jQuery scrollSlide Demo</h1>
+                <div class="jquery-script-ads" style="margin:20px auto" align="center"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+                <h2 align="center">Scroll down the page to see it in action</h2>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				<div class="section-left">
+					<div class="slide-left-200">
+						<h2>Lorem ipsum dolor</h2>
+						<p>Praesent accumsan lacinia purus, eu aliquam mauris malesuada et. Ut vitae libero quis augue viverra lacinia vel quis leo. In interdum vehicula mi sit amet consectetur. Proin in ante accumsan. </p>
+						<a class="btn" href="#">Read More</a>
+					</div>
+				</div>
+				<div class="section-right">
+					<div class="slide-right-200">
+						<img src="img/iphone.png">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="dark">
+			<div class="container">
+				<div class="section-left">
+					<div class="slide-left-400">
+						<img src="img/imac.png">
+					</div>
+				</div>
+				<div class="section-right">
+					<div class="slide-right-400">
+						<h2>Lorem ipsum dolor</h2>
+						<p>Praesent accumsan lacinia purus, eu aliquam mauris malesuada et. Ut vitae libero quis augue viverra lacinia vel quis leo. In interdum vehicula mi sit amet consectetur. Proin in ante accumsan. </p>
+						<a class="btn" href="#">Read More</a>
+					</div>
+				</div>
+			</div>
+		</section>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	</body>
+</html>
