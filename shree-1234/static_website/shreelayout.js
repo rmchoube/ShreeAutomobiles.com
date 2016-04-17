@@ -155,18 +155,32 @@ $(document).ready(function(){
 
         });
 
+    var $modelid = -1;
+    var $branchid = -1;
+    var items = [["3UWLSMBZRDDAC", "abcd"]];
 
+    function submitToPaypal(frm) {
+        var $branchEle = document.getElementById('branchselection');
+        var $i = 0;
 
+        for ($i = 0; $i < $branchEle.length; $i++) {
+            if ($branchEle[$i].selected) {
+                $branchid = $i;
+                break;
+            }
+        }
 
+        if ($branchid == -1) {
+            alert("Please select branch");
+        } else {
+            alert($branchid);
+            frm.hosted_button_id.value = items[$branchid][$modelid];
+            frm.submit();
+        }
 
+        return true;
+    }
 
-
-
-
-
-
-
- 
      function showme(ele) {
         var $divvar = document.getElementById("buyit");
         var $id = ele.id;
@@ -174,34 +188,40 @@ $(document).ready(function(){
 
         switch($id) {
             case "E-Scoot":
-                $textAndPic.append('<div class="col-md-6"><img src="e-scoot.png" width="500" height="auto" class="img-responsive"/><h3>E-scoot Rs.39,388/- only.</h3><img src="paypal.png" width="200" height="80" class="img-responsive" style="margin-top:40px;"/></div>');
+                $modelid = 0;
+                $textAndPic.append('<div class="col-md-6"><img src="e-scoot.png" width="500" height="auto" class="img-responsive"/><h3>E-scoot Rs.39,388/- only.</h3></div>');
                 break;
-                case "E-Star":
-                $textAndPic.append('<div class="col-md-6"><img src="Estar.png" width="500" height="auto" class="img-responsive"/><h3>Estar Rs.59,619/- only.</h3><img src="paypal.png" width="200" height="80" class="img-responsive" style="margin-top:40px;"/></div>');
+            case "E-Star":
+                $modelid = 1;
+                $textAndPic.append('<div class="col-md-6"><img src="Estar.png" width="500" height="auto" class="img-responsive"/><h3>Estar Rs.59,619/- only.</h3></div>');
                 break;
-                case "E-Lite":
-                $textAndPic.append('<div class="col-md-6"><img src="E-LITE-BIKE.png" width="500" height="auto" class="img-responsive"/><h3>E-Lite bike Rs.25,770/- only.</h3><img src="paypal.png" width="80" height="auto" class="img-responsive" style="margin-top:40px;"/></div>');
+            case "E-Lite":
+                $modelid = 2;
+                $textAndPic.append('<div class="col-md-6"><img src="E-LITE-BIKE.png" width="500" height="auto" class="img-responsive"/><h3>E-Lite bike Rs.25,770/- only.</h3></div>');
                 break;
-                case "E-BikeVX":
-                $textAndPic.append('<div class="col-md-6"><img src="ebikeVX.png" width="500" height="auto" class="img-responsive"/><h3>E-Bike VX Rs.14,970/- only.</h3><img src="paypal.png" width="200" height="80" class="img-responsive" style="margin-top:40px;"/></div>');
+            case "E-BikeVX":
+                $modelid = 3;
+                $textAndPic.append('<div class="col-md-6"><img src="ebikeVX.png" width="500" height="auto" class="img-responsive"/><h3>E-Bike VX Rs.14,970/- only.</h3></div>');
                 break;
-                case "E-Mate":
-                $textAndPic.append('<div class="col-md-6"><img src="E-mate.png" width="500" height="auto" class="img-responsive"/><h3>E-Mate Rs.39,388/- only.</h3><img src="paypal.png" width="200" height="80" class="img-responsive" style="margin-top:40px;"/></div>');
+            case "E-Mate":
+                $modelid = 4;
+                $textAndPic.append('<div class="col-md-6"><img src="E-mate.png" width="500" height="auto" class="img-responsive"/><h3>E-Mate Rs.39,388/- only.</h3></div>');
                 break;
-                case "E-Plus":
-                $textAndPic.append('<div class="col-md-6"><img src="E-Plus.png" width="500" height="auto" class="img-responsive"/><h3>E-Plus Rs.---------/- only.</h3><img src="paypal.png" width="200" height="80" class="img-responsive" style="margin-top:40px;"/></div>');
+            case "E-Plus":
+                $modelid = 5;
+                $textAndPic.append('<div class="col-md-6"><img src="E-Plus.png" width="500" height="auto" class="img-responsive"/><h3>E-Plus Rs.---------/- only.</h3></div>');
                 break;
-                case "E-Rickshaw":
-                $textAndPic.append('<div class="col-md-6"><img src="rickshaw.png" width="500" height="auto" class="img-responsive" style="margin-top:30px"/><h3>E-Rickshaw Rs.--------/- only.</h3><img src="paypal.png" width="200" height="80" class="img-responsive" style="margin-top:40px;"/></div>');
+            case "E-Rickshaw":
+                $modelid = 6;
+                $textAndPic.append('<div class="col-md-6"><img src="rickshaw.png" width="500" height="auto" class="img-responsive" style="margin-top:30px"/><h3>E-Rickshaw Rs.--------/- only.</h3></div>');
                 break;
-                case "Battries":
-                $textAndPic.append('<div class="col-md-6"><img src="battrie.png" width="260" height="239" class="img-responsive" style="margin-top:50px;margin-left:80px"/><h3>Battries Rs.-------/- only.</h3><img src="paypal.png" width="200" height="80" class="img-responsive" style="margin-top:40px;"/></div>');
+            case "Battries":
+                $modelid = 7;
+                $textAndPic.append('<div class="col-md-6"><img src="battrie.png" width="260" height="239" class="img-responsive" style="margin-top:50px;margin-left:80px"/><h3>Battries Rs.-------/- only.</h3></div>');
                 break;
-                
-                
         }
 
-        $textAndPic.append('<div class="col-md-6"><h4>Book it now just on deposit of Rs.5000 only.</h4><h4>Delivery estimate 15 days from the day of booking.</h4><form  role="form"><div class="form-group"><label for="selectcity">Please select branch</label><select multiple class="form-control" id="branchselection"><option>Akola</option><option>Amravati</option><option>Nagpur</option><option>Hydrabad</option><option>Khandawa</option></select></div><div class="form-group"><label for="name">Full Name</label><input type="text" class="form-control" id="name" placeholder="Name Surname"></div><div class="form-group"><label for="contact">Contact Number</label><input type="text" class="form-control" id="contact" placeholder="000-000-0000"></div><div class="form-group"><label for="email">Email</label><input type="email" class="form-control" id="email" placeholder="Enter email"></div><div class="form-group"><label for="address">Street Address</label><input type="text" class="form-control" id="address" placeholder="Street Address"></input><div class="row" style="margin-top:15px;"><div class="col-md-3"><div class="form-group"><label for="zip code">Zip code</label><input type="zipcode" class="form-control" id="zipcode"></div></div><div class="col-md-3"><div class="form-group"><label for="city">City</label><input type="text" class="form-control" id="city" ></div></div></div></div><button type="submit" class="btn btn-lg ">Buy It Now</button></form></div></div></div>');
+        $textAndPic.append('<div class="col-md-6"><h4>Book it now just on deposit of Rs.5000 only.</h4><h4>Delivery estimate 15 days from the day of booking.</h4><label for="selectcity">Please select branch</label><select multiple class="form-control" id="branchselection"><option>Akola</option><option>Amravati</option><option>Nagpur</option><option>Hydrabad</option><option>Khandawa</option></select></div><form id="paypalform" name="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" onsubmit="return submitToPaypal(this);" method="post" target="_top"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id"><input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1"></form></div></div></div>');
 
         BootstrapDialog.show({
             title: ("Get your"+ " " + $id +" "+ "Now"),
